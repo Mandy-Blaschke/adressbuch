@@ -1,24 +1,47 @@
 <h2>Neuer Kontakt</h2>
 
+<div *ngIf="service.showWarning" class="warning">
+  Vor- oder Nachname muss eingetragen sein!
+</div>
+
 <main>
 
   <div class="left">
 
-    <h3>Name</h3>
+    <div *ngIf="service.showWarning"
+         [class.warning-text]="service.showWarning">
 
-    <div *ngIf="service.showWarning">Vor- oder Nachname muss eingetragen sein.</div>
+      <h3>Name</h3>
 
-    <label>Vorname <br>
-      <input type="text" [(ngModel)]="service.newPersonFirst">
-    </label>
+      <label>Vorname* <br>
+        <input type="text" [(ngModel)]="service.newPersonFirst">
+      </label>
+
+      <br>
+
+      <label>Nachname* <br>
+        <input type="text" [(ngModel)]="service.newPersonLast">
+      </label>
+
+    </div>
+
+    <div *ngIf="service.showWarning === false">
+      <h3>Name</h3>
+
+      <label>Vorname <br>
+        <input type="text" [(ngModel)]="service.newPersonFirst">
+      </label>
+
+      <br>
+
+      <label>Nachname <br>
+        <input type="text" [(ngModel)]="service.newPersonLast">
+      </label>
+
+    </div>
 
     <br>
 
-    <label>Nachname <br>
-      <input type="text" [(ngModel)]="service.newPersonLast">
-    </label>
-
-    <br>
 
     <h3>Anschrift</h3>
 
@@ -39,6 +62,7 @@
     </label>
 
   </div>
+
 
   <div class="right">
 
@@ -65,13 +89,13 @@
     <h3>Termine</h3>
 
     <label>Geburtstag <br>
-      <input type="text" [(ngModel)]="service.newPersonBirthday">
+      <input type="date" [(ngModel)]="service.newPersonBirthday">
     </label>
 
     <br>
 
     <label>Hochzeitstag <br>
-      <input type="text" [(ngModel)]="service.newPersonWeddingdate">
+      <input type="date" [(ngModel)]="service.newPersonWeddingdate">
     </label>
 
   </div>

@@ -3,19 +3,21 @@
 
 <h3>Anschrift</h3>
 
-<div class="row">
-  <p>Straße: {{service.selectedPerson.street}}</p>
-  <p>Ort: {{service.selectedPerson.postcode}} {{service.selectedPerson.location}}</p>
-</div>
+<p>Straße: {{service.selectedPerson.street}}</p>
+<p>Ort: {{service.selectedPerson.postcode}} {{service.selectedPerson.location}}</p>
+
 
 <h3>Kontakt</h3>
+
 <p>Telefon: {{service.selectedPerson.tel}}</p>
 <p>Mobil: {{service.selectedPerson.mobil}}</p>
 <p>Mail: {{service.selectedPerson.mail}}</p>
 
+
 <h3>Termine</h3>
-<p>Geburtstag: {{service.selectedPerson.birthday}}</p>
-<p>Hochzeitstag: {{service.selectedPerson.weddingdate}}</p>
+
+<p>Geburtstag: {{service.formatDate(service.selectedPerson.birthday)}}</p>
+<p>Hochzeitstag: {{service.formatDate(service.selectedPerson.weddingdate)}}</p>
 
 <br>
 

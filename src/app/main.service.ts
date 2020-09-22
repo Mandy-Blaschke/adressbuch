@@ -28,55 +28,27 @@ export class MainService {
 
   editedPerson: Person;
 
-  PersonToEditFirst: string;
-  PersonToEditLast: string;
-  PersonToEditStreet: string;
-  PersonToEditPostcode: number;
-  PersonToEditLocation: string;
-  PersonToEditTel: string;
-  PersonToEditMobil: string;
-  PersonToEditMail: string;
-  PersonToEditBirthday: string;
-  PersonToEditWeddingdate: string;
+  personToEditFirst: string;
+  personToEditLast: string;
+  personToEditStreet: string;
+  personToEditPostcode: number;
+  personToEditLocation: string;
+  personToEditTel: string;
+  personToEditMobil: string;
+  personToEditMail: string;
+  personToEditBirthday: string;
+  personToEditWeddingdate: string;
 
-  contacts: Person[] = [
-    {
-      first: 'Felix',
-      last: 'Blaschke',
-      street: 'Münchener Str. 8',
-      postcode: 63179,
-      location: 'Obertshausen',
-      tel: '0365-4745896',
-      mobil: '0152-25887445',
-      mail: 'felix@felix.de',
-      birthday: new Date(1986, 1, 16).toLocaleDateString(),
-      weddingdate: new Date(2016, 2, 18).toLocaleDateString(),
-    },
-    {
-      first: 'Mandy',
-      last: 'Blaschke',
-      street: 'Münchener Str. 8',
-      postcode: 63179,
-      location: 'Obertshausen',
-      tel: '0365-4745896',
-      mobil: '0152-21465784',
-      mail: 'mandy@mandy.de',
-      birthday: new Date(1989, 0, 9).toLocaleDateString(),
-      weddingdate: new Date(2016, 2, 18).toLocaleDateString(),
-    },
-    {
-      first: 'Susann',
-      last: 'Herrmann',
-      street: 'Rostocker Str. 12',
-      postcode: 18057,
-      location: 'Rostock',
-      tel: '0365-4745896',
-      mobil: '0152-21465784',
-      mail: 'susi@susi.de',
-      birthday: new Date(1986, 1, 16).toLocaleDateString(),
-      weddingdate: undefined,
+  contacts: Person[] = [];
+
+  formatDate(date: string): string {
+    if (date !== undefined){
+    const arrDate = date.split('-');
+    return arrDate[2].concat('.', arrDate[1], '.', arrDate[0]);
+    } else {
+      return '';
     }
-  ];
+  }
 
   sortContacts(): void {
     this.contacts.sort((a, b) => a.last.localeCompare(b.last));
@@ -145,30 +117,30 @@ export class MainService {
   editPerson(personToEdit: Person): void {
     this.view = 'edit';
     this.selectedPerson = personToEdit;
-    this.PersonToEditFirst = personToEdit.first;
-    this.PersonToEditLast = personToEdit.last;
-    this.PersonToEditStreet = personToEdit.street;
-    this.PersonToEditPostcode = personToEdit.postcode;
-    this.PersonToEditLocation = personToEdit.location;
-    this.PersonToEditTel = personToEdit.tel;
-    this.PersonToEditMobil = personToEdit.mobil;
-    this.PersonToEditMail = personToEdit.mail;
-    this.PersonToEditBirthday = personToEdit.birthday;
-    this.PersonToEditWeddingdate = personToEdit.weddingdate;
+    this.personToEditFirst = personToEdit.first;
+    this.personToEditLast = personToEdit.last;
+    this.personToEditStreet = personToEdit.street;
+    this.personToEditPostcode = personToEdit.postcode;
+    this.personToEditLocation = personToEdit.location;
+    this.personToEditTel = personToEdit.tel;
+    this.personToEditMobil = personToEdit.mobil;
+    this.personToEditMail = personToEdit.mail;
+    this.personToEditBirthday = personToEdit.birthday;
+    this.personToEditWeddingdate = personToEdit.weddingdate;
   }
 
   saveChanges(): void {
     this.editedPerson = this.selectedPerson;
-    this.editedPerson.first = this.PersonToEditFirst;
-    this.editedPerson.last = this.PersonToEditLast;
-    this.editedPerson.street = this.PersonToEditStreet;
-    this.editedPerson.postcode = this.PersonToEditPostcode;
-    this.editedPerson.location = this.PersonToEditLocation;
-    this.editedPerson.tel = this.PersonToEditTel;
-    this.editedPerson.mobil = this.PersonToEditMobil;
-    this.editedPerson.mail = this.PersonToEditMail;
-    this.editedPerson.birthday = this.PersonToEditBirthday;
-    this.editedPerson.weddingdate = this.PersonToEditWeddingdate;
+    this.editedPerson.first = this.personToEditFirst;
+    this.editedPerson.last = this.personToEditLast;
+    this.editedPerson.street = this.personToEditStreet;
+    this.editedPerson.postcode = this.personToEditPostcode;
+    this.editedPerson.location = this.personToEditLocation;
+    this.editedPerson.tel = this.personToEditTel;
+    this.editedPerson.mobil = this.personToEditMobil;
+    this.editedPerson.mail = this.personToEditMail;
+    this.editedPerson.birthday = this.personToEditBirthday;
+    this.editedPerson.weddingdate = this.personToEditWeddingdate;
 
     this.sortContacts();
     this.view = 'nothing';
