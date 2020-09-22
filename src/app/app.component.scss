@@ -1,0 +1,45 @@
+main {
+  display: flex;
+
+  .left {
+    background-color: #deffdc;
+    border: 2px solid #6da06a;
+    border-radius: 8px;
+    width: 15%;
+    min-height: 450px;
+    position: relative;
+    padding: 15px;
+
+    .person:hover {
+      cursor: pointer;
+      font-weight: bolder;
+      color: #6da06a;
+    }
+
+    .mark-person {
+      background-color: #d6d3d3;
+      border-radius: 8px;
+      padding: 3px;
+      font-size: 1.2rem;
+      color: #6da06a;
+      font-weight: normal;
+    }
+
+    .new-contact {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+    }
+  }
+
+  .right {
+    background-color: #deffdc;
+    border: 2px solid #6da06a;
+    border-radius: 8px;
+    width: 55%;
+    min-height: 450px;
+    position: relative;
+    padding: 25px;
+  }
+
+}

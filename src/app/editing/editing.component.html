@@ -1,0 +1,59 @@
+<h2>Neuer Kontakt</h2>
+
+
+<h3>Name</h3>
+
+<label>Vorname
+  <input type="text" [(ngModel)]="service.PersonToEditFirst">
+</label>
+
+<label>Nachname
+  <input type="text" [(ngModel)]="service.PersonToEditLast">
+</label>
+
+
+<h3>Anschrift</h3>
+
+<label>Straße
+  <input type="text" [(ngModel)]="service.PersonToEditStreet">
+</label>
+
+<label>Postleitzahl
+  <input type="number" [(ngModel)]="service.PersonToEditPostcode">
+</label>
+
+<label>Ort
+  <input type="text"  [(ngModel)]="service.PersonToEditLocation">
+</label>
+
+
+<h3>Kontakt</h3>
+
+<label>Telefon
+  <input type="number" [(ngModel)]="service.PersonToEditTel">
+</label>
+
+<label>Mobil
+  <input type="number" [(ngModel)]="service.PersonToEditMobil">
+</label>
+
+<label>Mail
+  <input type="text" [(ngModel)]="service.PersonToEditMail">
+</label>
+
+
+<h3>Termine</h3>
+
+<label>Geburtstag
+  <input type="text" [(ngModel)]="service.PersonToEditBirthday">
+</label>
+
+<label>Hochzeitstag
+  <input type="text" [(ngModel)]="service.PersonToEditWeddingdate">
+</label>
+
+<br>
+<br>
+
+<app-button (click)="service.saveChanges()">Speichern</app-button>
+<app-button (click)="service.cancelEditing()">Abbrechen</app-button>

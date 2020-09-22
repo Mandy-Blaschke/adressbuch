@@ -1,0 +1,61 @@
+<h2>Neuer Kontakt</h2>
+
+
+<h3>Name</h3>
+
+<div *ngIf="service.showWarning">Vor- oder Nachname muss eingetragen sein.</div>
+
+<label>Vorname
+  <input type="text" [(ngModel)]="service.newPersonFirst">
+</label>
+
+<label>Nachname
+  <input type="text" [(ngModel)]="service.newPersonLast">
+</label>
+
+
+<h3>Anschrift</h3>
+
+<label>Straße
+  <input type="text" [(ngModel)]="service.newPersonStreet">
+</label>
+
+<label>Postleitzahl
+  <input type="number" [(ngModel)]="service.newPersonPostcode">
+</label>
+
+<label>Ort
+  <input type="text"  [(ngModel)]="service.newPersonLocation">
+</label>
+
+
+<h3>Kontakt</h3>
+
+<label>Telefon
+  <input type="number" [(ngModel)]="service.newPersonTel">
+</label>
+
+<label>Mobil
+  <input type="number" [(ngModel)]="service.newPersonMobil">
+</label>
+
+<label>Mail
+  <input type="text" [(ngModel)]="service.newPersonMail">
+</label>
+
+
+<h3>Termine</h3>
+
+<label>Geburtstag
+  <input type="text" [(ngModel)]="service.newPersonBirthday">
+</label>
+
+<label>Hochzeitstag
+  <input type="text" [(ngModel)]="service.newPersonWeddingdate">
+</label>
+
+<br>
+<br>
+
+<app-button (click)="service.saveNewPerson()">Speichern</app-button>
+<app-button (click)="service.cancelNew()">Abbrechen</app-button>

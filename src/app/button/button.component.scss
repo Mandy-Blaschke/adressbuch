@@ -1,0 +1,16 @@
+:host {
+  border-radius: 8px;
+  background-color: #d973b3;
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px black;
+  padding: 5px;
+  box-shadow: 2px 2px 2px #6b6b6b;
+  margin: 10px;
+
+  &:hover {
+    background-color: white;
+    color: #d973b3;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 2px #6b6b6b;
+  }
+}
