@@ -1,56 +1,79 @@
 <h2>Neuer Kontakt</h2>
 
 
-<h3>Name</h3>
+<main>
 
-<label>Vorname
-  <input type="text" [(ngModel)]="service.PersonToEditFirst">
-</label>
+  <div class="left">
 
-<label>Nachname
-  <input type="text" [(ngModel)]="service.PersonToEditLast">
-</label>
+    <h3>Name</h3>
 
+    <label>Vorname <br>
+      <input type="text" [(ngModel)]="service.PersonToEditFirst">
+    </label>
 
-<h3>Anschrift</h3>
+    <br>
 
-<label>Straße
-  <input type="text" [(ngModel)]="service.PersonToEditStreet">
-</label>
-
-<label>Postleitzahl
-  <input type="number" [(ngModel)]="service.PersonToEditPostcode">
-</label>
-
-<label>Ort
-  <input type="text"  [(ngModel)]="service.PersonToEditLocation">
-</label>
+    <label>Nachname <br>
+      <input type="text" [(ngModel)]="service.PersonToEditLast">
+    </label>
 
 
-<h3>Kontakt</h3>
+    <h3>Anschrift</h3>
 
-<label>Telefon
-  <input type="number" [(ngModel)]="service.PersonToEditTel">
-</label>
+    <label>Straße <br>
+      <input type="text" [(ngModel)]="service.PersonToEditStreet">
+    </label>
 
-<label>Mobil
-  <input type="number" [(ngModel)]="service.PersonToEditMobil">
-</label>
+    <br>
 
-<label>Mail
-  <input type="text" [(ngModel)]="service.PersonToEditMail">
-</label>
+    <label>Postleitzahl <br>
+      <input type="number" [(ngModel)]="service.PersonToEditPostcode">
+    </label>
+
+    <br>
+
+    <label>Ort <br>
+      <input type="text"  [(ngModel)]="service.PersonToEditLocation">
+    </label>
+
+  </div>
+
+  <div class="right">
+
+    <h3>Kontakt</h3>
+
+    <label>Telefon <br>
+      <input type="number" [(ngModel)]="service.PersonToEditTel">
+    </label>
+
+    <br>
+
+    <label>Mobil <br>
+      <input type="number" [(ngModel)]="service.PersonToEditMobil">
+    </label>
+
+    <br>
+
+    <label>Mail <br>
+      <input type="text" [(ngModel)]="service.PersonToEditMail">
+    </label>
 
 
-<h3>Termine</h3>
+    <h3>Termine</h3>
 
-<label>Geburtstag
-  <input type="text" [(ngModel)]="service.PersonToEditBirthday">
-</label>
+    <label>Geburtstag <br>
+      <input type="text" [(ngModel)]="service.PersonToEditBirthday">
+    </label>
 
-<label>Hochzeitstag
-  <input type="text" [(ngModel)]="service.PersonToEditWeddingdate">
-</label>
+    <br>
+
+    <label>Hochzeitstag <br>
+      <input type="text" [(ngModel)]="service.PersonToEditWeddingdate">
+    </label>
+
+  </div>
+
+</main>
 
 <br>
 <br>

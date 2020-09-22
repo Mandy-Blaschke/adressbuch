@@ -1,58 +1,82 @@
 <h2>Neuer Kontakt</h2>
 
+<main>
 
-<h3>Name</h3>
+  <div class="left">
 
-<div *ngIf="service.showWarning">Vor- oder Nachname muss eingetragen sein.</div>
+    <h3>Name</h3>
 
-<label>Vorname
-  <input type="text" [(ngModel)]="service.newPersonFirst">
-</label>
+    <div *ngIf="service.showWarning">Vor- oder Nachname muss eingetragen sein.</div>
 
-<label>Nachname
-  <input type="text" [(ngModel)]="service.newPersonLast">
-</label>
+    <label>Vorname <br>
+      <input type="text" [(ngModel)]="service.newPersonFirst">
+    </label>
 
+    <br>
 
-<h3>Anschrift</h3>
+    <label>Nachname <br>
+      <input type="text" [(ngModel)]="service.newPersonLast">
+    </label>
 
-<label>Straße
-  <input type="text" [(ngModel)]="service.newPersonStreet">
-</label>
+    <br>
 
-<label>Postleitzahl
-  <input type="number" [(ngModel)]="service.newPersonPostcode">
-</label>
+    <h3>Anschrift</h3>
 
-<label>Ort
-  <input type="text"  [(ngModel)]="service.newPersonLocation">
-</label>
+    <label>Straße <br>
+      <input type="text" [(ngModel)]="service.newPersonStreet">
+    </label>
 
+    <br>
 
-<h3>Kontakt</h3>
+    <label>Postleitzahl <br>
+      <input type="number" [(ngModel)]="service.newPersonPostcode">
+    </label>
 
-<label>Telefon
-  <input type="number" [(ngModel)]="service.newPersonTel">
-</label>
+    <br>
 
-<label>Mobil
-  <input type="number" [(ngModel)]="service.newPersonMobil">
-</label>
+    <label>Ort <br>
+      <input type="text" [(ngModel)]="service.newPersonLocation">
+    </label>
 
-<label>Mail
-  <input type="text" [(ngModel)]="service.newPersonMail">
-</label>
+  </div>
 
+  <div class="right">
 
-<h3>Termine</h3>
+    <h3>Kontakt</h3>
 
-<label>Geburtstag
-  <input type="text" [(ngModel)]="service.newPersonBirthday">
-</label>
+    <label>Telefon <br>
+      <input type="number" [(ngModel)]="service.newPersonTel">
+    </label>
 
-<label>Hochzeitstag
-  <input type="text" [(ngModel)]="service.newPersonWeddingdate">
-</label>
+    <br>
+
+    <label>Mobil <br>
+      <input type="number" [(ngModel)]="service.newPersonMobil">
+    </label>
+
+    <br>
+
+    <label>Mail <br>
+      <input type="text" [(ngModel)]="service.newPersonMail">
+    </label>
+
+    <br>
+
+    <h3>Termine</h3>
+
+    <label>Geburtstag <br>
+      <input type="text" [(ngModel)]="service.newPersonBirthday">
+    </label>
+
+    <br>
+
+    <label>Hochzeitstag <br>
+      <input type="text" [(ngModel)]="service.newPersonWeddingdate">
+    </label>
+
+  </div>
+
+</main>
 
 <br>
 <br>

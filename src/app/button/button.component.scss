@@ -2,8 +2,7 @@
   border-radius: 8px;
   background-color: #d973b3;
   color: whitesmoke;
-  text-shadow: 1px 1px 1px black;
-  padding: 5px;
+  padding: 5px 10px;
   box-shadow: 2px 2px 2px #6b6b6b;
   margin: 10px;
 
@@ -11,6 +10,7 @@
     background-color: white;
     color: #d973b3;
     cursor: pointer;
-    box-shadow: inset 2px 2px 2px #6b6b6b;
+    box-shadow: inset 2px 1px 2px darkgray;
+    text-shadow: none;
   }
 }

@@ -18,7 +18,7 @@ export class MainService {
   newPersonFirst = '';
   newPersonLast = '';
   newPersonStreet: string;
-  newPersonPostcode: string;
+  newPersonPostcode: number;
   newPersonLocation: string;
   newPersonTel: string;
   newPersonMobil: string;
@@ -31,7 +31,7 @@ export class MainService {
   PersonToEditFirst: string;
   PersonToEditLast: string;
   PersonToEditStreet: string;
-  PersonToEditPostcode: string;
+  PersonToEditPostcode: number;
   PersonToEditLocation: string;
   PersonToEditTel: string;
   PersonToEditMobil: string;
@@ -44,7 +44,7 @@ export class MainService {
       first: 'Felix',
       last: 'Blaschke',
       street: 'Münchener Str. 8',
-      postcode: '63179',
+      postcode: 63179,
       location: 'Obertshausen',
       tel: '0365-4745896',
       mobil: '0152-25887445',
@@ -56,7 +56,7 @@ export class MainService {
       first: 'Mandy',
       last: 'Blaschke',
       street: 'Münchener Str. 8',
-      postcode: '63179',
+      postcode: 63179,
       location: 'Obertshausen',
       tel: '0365-4745896',
       mobil: '0152-21465784',
@@ -68,13 +68,13 @@ export class MainService {
       first: 'Susann',
       last: 'Herrmann',
       street: 'Rostocker Str. 12',
-      postcode: '18057',
+      postcode: 18057,
       location: 'Rostock',
       tel: '0365-4745896',
       mobil: '0152-21465784',
       mail: 'susi@susi.de',
       birthday: new Date(1986, 1, 16).toLocaleDateString(),
-      weddingdate: '',
+      weddingdate: undefined,
     }
   ];
 
@@ -86,13 +86,13 @@ export class MainService {
     this.newPersonFirst = '';
     this.newPersonLast = '';
     this.newPersonStreet = '';
-    this.newPersonPostcode = '';
+    this.newPersonPostcode = undefined;
     this.newPersonLocation = '';
     this.newPersonTel = '';
     this.newPersonMobil = '';
     this.newPersonMail = '';
-    this.newPersonBirthday = '';
-    this.newPersonWeddingdate = '';
+    this.newPersonBirthday = undefined;
+    this.newPersonWeddingdate = undefined;
   }
 
   showPerson(person: Person): void {
@@ -185,7 +185,7 @@ export interface Person {
   first: string;
   last: string;
   street: string;
-  postcode: string;
+  postcode: number;
   location: string;
   mail: string;
   tel: string;

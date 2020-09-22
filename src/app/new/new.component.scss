@@ -1,0 +1,24 @@
+h2 {
+  color: mediumvioletred;
+}
+
+h3 {
+  color: #6da06a;
+}
+
+main {
+  display: flex;
+
+  .left, .right {
+    width: 50%;
+  }
+
+  label {
+
+    input {
+      padding: 3px;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+  }
+}
